@@ -1,0 +1,12 @@
+<h1>Our Artist</h1>
+<ngb-carousel>
+  <ng-template ngbSlide *ngFor="let artista of ListaArtista">
+    <div class="picsum-img-wrapper">
+      <img src="assets/{{artista.foto}}" alt="{{artista.nombre}}">
+    </div>
+    <div class="carousel-caption">
+      <h3>{{artista.nombre}}</h3>
+      <p>{{artista.descripcion}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

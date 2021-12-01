@@ -1,0 +1,49 @@
+h1{
+    margin-top: 30px;
+    margin-left: 150px;
+    font-size: 30px;
+    color: grey;
+}
+#fondo {
+    float: left;
+    width: 60%;
+    margin-top: 20px;
+}
+#fondo img{
+    display: flex;
+    width: 680px;
+	height: 490px;
+    justify-content: center;
+}
+#news {
+    float: right;
+    width: 40%;
+    margin-top: 20px;
+    border-left: 6px solid black;
+}
+#news img{
+    width: 100px;
+    height: 150px;
+    display: flex;
+    float: left;
+}
+li{
+    list-style-type: none;
+    margin: 16px 5px 5px 5px;
+}
+
+#mid{
+    padding-top: 16px;
+    border-bottom: 6px solid black;
+    border-top: 6px solid black;
+}
+
+p{
+    display: flex;
+    margin-left: 110px;
+    margin-top: 5px;
+}
+strong{
+    display: flex;
+    margin-left: 110px;
+}

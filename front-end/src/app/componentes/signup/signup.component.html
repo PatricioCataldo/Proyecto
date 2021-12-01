@@ -1,0 +1,26 @@
+
+<form [formGroup]="formulario1" (ngSubmit)="validacion()" novalidate>
+    <ul>
+        <div id="bg">   
+        <li>
+            <input type="text" class="icono-placeholder" formControlName="nombre" placeholder=" Username">
+            <div *ngIf="formulario1.controls['nombre'].invalid && formulario1.controls['nombre'].dirty " class="alert alert-danger">Username required</div> 
+        </li>
+        <li>
+            <input type="password" class="icono-placeholder" formControlName="contraseña" placeholder=" Password">
+            <div *ngIf="formulario1.controls['contraseña'].invalid && formulario1.controls['contraseña'].dirty " class="alert alert-danger">Password required</div> 
+        </li>
+        <li>
+            <input type="checkbox" class="form-check-input" id="recordar">
+            <label class="form-check-label" for="recordar">Remember me</label>
+            <A id="fp" HREF="">Forgot the password?</A>
+        </li>
+        <li>
+            <button type="submit" formControlName="boton" class="btn btn-primary" [disabled]="!formulario1.valid">LOG IN</button>
+        </li>
+        <li>
+            <A HREF="registrar" id="registro">Don't have an account? &nbsp; &nbsp; &nbsp; Sign up</A>
+        </li>
+        </div>   
+    </ul>
+</form>

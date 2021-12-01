@@ -1,0 +1,23 @@
+<div *ngIf="!activarMsj1">
+    <form [formGroup]="formulario2" (ngSubmit)="validacion()" novalidate>
+    <ul>
+        <div id="bg">
+        <li>
+            <input type="text" formControlName="nombre" class="icono-placeholder" placeholder=" Username">
+            <div *ngIf="formulario2.controls['nombre'].invalid && formulario2.controls['nombre'].dirty " class="alert alert-danger">Username required</div>
+        </li>
+        <li>
+            <input type="email" formControlName="email" class="icono-placeholder" placeholder=" E-mail">
+            <div *ngIf="formulario2.controls['email'].invalid && formulario2.controls['email'].dirty " class="alert alert-danger">E-mail required</div>
+        </li>
+        <li>
+            <input type="password" formControlName="contraseña" class="icono-placeholder" placeholder=" Password">
+            <div *ngIf="formulario2.controls['contraseña'].invalid && formulario2.controls['contraseña'].dirty " class="alert alert-danger">Password required</div>
+        </li>
+        <li>
+            <button type="submit" formControlName="boton" class="btn btn-primary" [disabled]="!formulario2.valid">SIGN IN</button>
+        </li>
+        </div>
+    </ul>
+</form>
+<div *ngIf="activarMsj1" id="despedida"><b>Thanks for the Registration!!!</b></div>
